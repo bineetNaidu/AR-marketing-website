@@ -22,7 +22,7 @@ const Index = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center py-16">
-          <div className="w-full max-w-2xl text-center">
+          <div className="w-full max-w-2xl text-center sm:px-4 md:px-0">
             <h3 className="text-4xl text-black pb-4">
               A new way for your devices to be helpful
             </h3>
@@ -37,9 +37,9 @@ const Index = () => {
               visual, immersive content on top of your real world.
             </p>
           </div>
-          <div className="h-2/4 py-16 flex">
+          <div className="h-2/4 py-16 flex flex-wrap md:flex-nowrap sm:px-4 md:px-0">
             <img
-              className="h-96 w-full object-cover pr-4"
+              className="h-96 w-full object-cover md:pr-4 sm:mb-4"
               src="https://images.unsplash.com/photo-1590126141992-d6a613152c77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXVnbWVudGVkJTIwcmVhbGl0eXxlbnwwfHwwfHw%3D&auto=format"
               alt="AR"
             />
@@ -52,7 +52,7 @@ const Index = () => {
 
           <hr className="border-b-2 border-gray-200 w-full mb-16" />
 
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-3">
             <FeatureCard
               title="AR in Google Search"
               description="Now you can use AR to place 3D digital objects right in your own space directly from Search or from websites on Chrome. Learn more about everything from NASA’s Curiosity Rover to human anatomy to animals like hedgehogs, penguins, and sharks, with a greater sense of context and scale."

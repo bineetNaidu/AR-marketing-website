@@ -16,13 +16,13 @@ const Apps = () => {
             backgroundImage: `url(https://images.unsplash.com/photo-1567881248445-83ead68a44d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGF1Z21lbnRlZCUyMHJlYWxpdHl8ZW58MHx8MHx8&auto=format)`,
           }}
         >
-          <h1 className="text-gray-300 absolute text-6xl w-auto top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 italic font-mono font-bold">
+          <h1 className="text-gray-300 absolute text-3xl sm:text-4xl md:text-6xl w-auto top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 italic font-mono font-bold">
             AR in action
           </h1>
         </div>
 
         <div className="flex flex-col items-center justify-center py-16">
-          <div className="w-full max-w-2xl text-center">
+          <div className="w-full max-w-2xl text-center px-2">
             <h3 className="text-4xl text-black pb-4">
               Step into endless possibilities
             </h3>
@@ -34,7 +34,7 @@ const Apps = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             <FeatureCard
               title="MARK"
               description="MARK is an AR social platform that allows users to discover, create and share AR art pieces and messages. The platform is built with the latest features of ARCore including Persistent Cloud Anchors and Depth API."

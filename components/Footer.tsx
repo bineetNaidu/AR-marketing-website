@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const Footer: FC = () => {
   return (
     <footer className="w-full min-w-full">
-      <div className="flex justify-center">
+      <div className="flex justify-center flex-wrap md:flex-nowrap">
         <p className="cursor-pointer mx-4 hover:underline text-gray-500 text-base font-bold hover:text-gray-700 transition-all">
           About
         </p>
