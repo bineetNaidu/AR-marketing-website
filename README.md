@@ -9,7 +9,7 @@ A marketing website and landing page for a technology product. #50-projects-for-
 - [x] create a Homepage.
 - [x] create a features Page.
 - [ ] add TaskShape.
-- [ ] Add a signup form.
+- [x] Add a signup form.
 - [ ] create a Contact Page.
 - [ ] Add a Contact form.
 - [x] Add a Contact Links to site.
