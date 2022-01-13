@@ -8,9 +8,11 @@ export const Footer: FC = () => {
         <p className="cursor-pointer mx-4 hover:underline text-gray-500 text-base font-bold hover:text-gray-700 transition-all">
           About
         </p>
-        <p className="cursor-pointer mx-4 hover:underline text-gray-500 text-base font-bold hover:text-gray-700 transition-all">
-          AR/VR
-        </p>
+        <Link href="/">
+          <a className="cursor-pointer mx-4 hover:underline text-gray-500 text-base font-bold hover:text-gray-700 transition-all">
+            Home
+          </a>
+        </Link>
         <p className="cursor-pointer mx-4 hover:underline text-gray-500 text-base font-bold hover:text-gray-700 transition-all">
           Privacy
         </p>
@@ -39,6 +41,9 @@ export const Footer: FC = () => {
         </p>
         <p className="cursor-pointer mx-4 hover:underline text-gray-500 text-base font-bold hover:text-gray-700 transition-all">
           Help Center
+        </p>
+        <p className="cursor-pointer mx-4 hover:underline text-gray-500 text-base font-bold hover:text-gray-700 transition-all">
+          AR/VR
         </p>
       </div>
       <div className="flex justify-center mt-4">
