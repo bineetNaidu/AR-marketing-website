@@ -42,10 +42,10 @@ export const Footer: FC = () => {
         </p>
       </div>
       <div className="flex justify-center mt-4">
-        <Link href="/contact">
-          <p className="cursor-pointer mx-4 underline text-gray-700 text-base font-bold hover:text-gray-900 transition-all">
+        <Link href="/contact-us">
+          <a className="cursor-pointer mx-4 underline text-gray-700 text-base font-bold hover:text-gray-900 transition-all">
             CONTACT US
-          </p>
+          </a>
         </Link>
       </div>
     </footer>

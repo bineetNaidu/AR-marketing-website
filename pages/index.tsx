@@ -68,7 +68,7 @@ const Index = () => {
               description="Using ARCore, our developer platform, we're working with our developer, creator and brand partners to bring helpful, entertaining, and engaging AR experiences to apps."
               imgSrc="https://images.unsplash.com/photo-1533162518830-e683192f365b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fHBob25lJTIwcG5nfGVufDB8fDB8fA%3D%3D&auto=format"
             >
-              <Link href="/apps">
+              <Link href="/ar/apps">
                 <a className="text-blue-500 hover:text-blue-800 hover:underline text-lg">
                   Learn more
                 </a>
