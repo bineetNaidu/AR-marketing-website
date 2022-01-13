@@ -8,7 +8,7 @@ A marketing website and landing page for a technology product. #50-projects-for-
 - [x] gather free pictures.
 - [x] create a Homepage.
 - [x] create a features Page.
-- [ ] add TaskShape.
+- [x] add TaskShape.
 - [x] Add a signup form.
 - [x] create a Contact Page.
 - [x] Add a Contact form.

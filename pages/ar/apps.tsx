@@ -1,9 +1,19 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FeatureCard } from '../../components/FeatureCard';
 import { Footer } from '../../components/Footer';
 
-const Apps = () => {
+type AppDataType = {
+  _id: string;
+  app: {
+    title: string;
+    description: string;
+    imgSrc: string;
+  };
+};
+
+const Apps = ({ apps }) => {
   return (
     <>
       <Head>
@@ -35,21 +45,15 @@ const Apps = () => {
 
         <div className="flex flex-col items-center justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-            <FeatureCard
-              title="MARK"
-              description="MARK is an AR social platform that allows users to discover, create and share AR art pieces and messages. The platform is built with the latest features of ARCore including Persistent Cloud Anchors and Depth API."
-              imgSrc="https://storage.googleapis.com/ar-vr-marketing-assets/mark.jpg"
-            />
-            <FeatureCard
-              title="Snapchat"
-              description="Snapchat is a social app that lets you easily talk with friends, view Live Stories from around the world, and explore news in Discover. It uses the Depth API to add a layer of realism to select filters."
-              imgSrc="https://storage.googleapis.com/ar-vr-marketing-assets/snapchat.jpg"
-            />
-            <FeatureCard
-              title="TikTok"
-              description="TikTok is THE destination for mobile videos. On TikTok, short-form videos are exciting, spontaneous, and genuine. TikTok is the world’s largest social video platform, with more than 1.5 billion active users."
-              imgSrc="https://storage.googleapis.com/ar-vr-marketing-assets/TikTok.jpeg"
-            />
+            {apps &&
+              (apps as AppDataType[]).map(({ _id, app }) => (
+                <FeatureCard
+                  key={_id}
+                  title={app.title}
+                  description={app.description}
+                  imgSrc={app.imgSrc}
+                />
+              ))}
           </div>
 
           <div className="w-full max-w-2xl text-center ">
@@ -73,6 +77,37 @@ const Apps = () => {
       </div>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const Q = `
+		query GetAppList {
+			getAppList(sort: {order: "asc", field: "_createdAt"} ) {
+				items {
+					_id
+					app {
+						imgSrc
+						description
+						title
+					}
+				}
+			}
+		}
+`;
+  const URL = process.env.TAKESHAPE_API_ENDPOINT;
+  const res = await fetch(URL, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.TAKESHAPE_API_KEY}`,
+    },
+    body: JSON.stringify({ query: Q }),
+  });
+  const data = await res.json();
+  return {
+    props: {
+      apps: data.data.getAppList.items,
+    },
+  };
 };
 
 export default Apps;
